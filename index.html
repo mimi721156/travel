@@ -48,30 +48,38 @@
             <p class="text-white/80">美好的時光，與最愛的家人一起分享</p>
         </div>
 
-        <!-- Essential Info -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-indigo-50/50 border-b border-indigo-100/50">
+        <!-- Essential Info (2x2 Grid) -->
+        <div class="grid grid-cols-2 gap-3 p-6 bg-indigo-50/50 border-b border-indigo-100/50">
             <!-- Hsinchu Card -->
-            <div onclick="openModal('modal-hsinchu')" class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm cursor-pointer hover:bg-indigo-50 transition-colors border border-transparent hover:border-indigo-200 group">
-                <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car text-xl"></i></div>
+            <div onclick="openModal('modal-hsinchu')" class="flex items-center space-x-3 bg-white p-3 rounded-2xl shadow-sm cursor-pointer hover:bg-indigo-50 transition-colors border border-transparent hover:border-indigo-200 group">
+                <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car text-lg"></i></div>
                 <div>
-                    <p class="text-xs text-gray-500">新竹出發</p>
-                    <p class="font-bold text-gray-800">06:00 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="text-[10px] text-gray-500 font-medium">新竹出發</p>
+                    <p class="font-bold text-gray-800 text-sm">06:00 <i class="fas fa-info-circle text-[8px] ml-0.5 text-gray-300"></i></p>
                 </div>
             </div>
             <!-- Taipei Card -->
-            <div onclick="openModal('modal-taipei')" class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm cursor-pointer hover:bg-indigo-50 transition-colors border border-transparent hover:border-indigo-200 group">
-                <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car-side text-xl"></i></div>
+            <div onclick="openModal('modal-taipei')" class="flex items-center space-x-3 bg-white p-3 rounded-2xl shadow-sm cursor-pointer hover:bg-indigo-50 transition-colors border border-transparent hover:border-indigo-200 group">
+                <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car-side text-lg"></i></div>
                 <div>
-                    <p class="text-xs text-gray-500">台北出發</p>
-                    <p class="font-bold text-gray-800">06:30 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="text-[10px] text-gray-500 font-medium">台北出發</p>
+                    <p class="font-bold text-gray-800 text-sm">06:30 <i class="fas fa-info-circle text-[8px] ml-0.5 text-gray-300"></i></p>
                 </div>
             </div>
             <!-- Gift Event Card -->
-            <div onclick="openModal('modal-event')" class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm cursor-pointer hover:bg-purple-50 transition-colors border border-transparent hover:border-purple-200 group">
-                <div class="text-purple-600 group-hover:scale-110 transition-transform"><i class="fas fa-gift text-xl"></i></div>
+            <div onclick="openModal('modal-event')" class="flex items-center space-x-3 bg-white p-3 rounded-2xl shadow-sm cursor-pointer hover:bg-purple-50 transition-colors border border-transparent hover:border-purple-200 group">
+                <div class="text-purple-600 group-hover:scale-110 transition-transform"><i class="fas fa-gift text-lg"></i></div>
                 <div>
-                    <p class="text-xs text-purple-600 font-bold">交換禮物</p>
-                    <p class="font-bold text-gray-800">規則詳情 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="text-[10px] text-purple-600 font-bold">交換禮物</p>
+                    <p class="font-bold text-gray-800 text-sm">規則詳情 <i class="fas fa-info-circle text-[8px] ml-0.5 text-gray-300"></i></p>
+                </div>
+            </div>
+            <!-- Accommodation Card (NEW) -->
+            <div onclick="openModal('modal-house-rules')" class="flex items-center space-x-3 bg-white p-3 rounded-2xl shadow-sm cursor-pointer hover:bg-teal-50 transition-colors border border-transparent hover:border-teal-200 group">
+                <div class="text-teal-600 group-hover:scale-110 transition-transform"><i class="fas fa-home text-lg"></i></div>
+                <div>
+                    <p class="text-[10px] text-teal-600 font-bold">民宿須知</p>
+                    <p class="font-bold text-gray-800 text-sm">入住守則 <i class="fas fa-info-circle text-[8px] ml-0.5 text-gray-300"></i></p>
                 </div>
             </div>
         </div>
@@ -211,6 +219,73 @@
     </div>
 
     <!-- Modals Section -->
+
+    <!-- Modal: House Rules (UPDATED) -->
+    <div id="modal-house-rules" class="modal fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-house-rules')"></div>
+        <div class="bg-white rounded-3xl w-full max-w-lg relative z-10 overflow-hidden shadow-2xl">
+            <div class="bg-teal-600 p-4 text-white flex justify-between items-center">
+                <h3 class="font-bold"><i class="fas fa-home mr-2"></i>清曦私人會所｜入住守則</h3>
+                <button onclick="closeModal('modal-house-rules')" class="text-white/80 hover:text-white"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+                <!-- Check-in info -->
+                <div class="grid grid-cols-2 gap-2 text-center">
+                    <div class="bg-teal-50 p-2 rounded-xl">
+                        <p class="text-[10px] text-teal-600 font-bold">入住時間</p>
+                        <p class="text-sm font-bold text-gray-800">15:00 後</p>
+                    </div>
+                    <div class="bg-teal-50 p-2 rounded-xl">
+                        <p class="text-[10px] text-teal-600 font-bold">退房時間</p>
+                        <p class="text-sm font-bold text-gray-800">11:00 前</p>
+                    </div>
+                </div>
+
+                <!-- Sales / Fees -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-teal-700 text-sm border-l-4 border-teal-500 pl-2">💰 付費設施與耗材</h4>
+                    <ul class="text-xs text-gray-600 space-y-1 bg-gray-50 p-3 rounded-xl">
+                        <li>🍺 生啤酒 (5L)：$800/桶 (需轉帳給房東)</li>
+                        <li>🍖 烤肉木炭 (5kg)：$300/桶</li>
+                        <li>🔥 烤肉設備使用費：$1,500/次</li>
+                        <li>🪥 盥洗用品：$10/套 (放置一樓走道抽屜)</li>
+                    </ul>
+                </div>
+
+                <!-- Cleaning rules -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-teal-700 text-sm border-l-4 border-teal-500 pl-2">🧹 清潔與維護規範</h4>
+                    <div class="text-xs text-gray-600 space-y-2">
+                        <p>● <span class="font-bold text-red-600">廚房與垃圾：</span>使用餐具請清洗歸位並做好分類。若未清理將酌收 <span class="font-bold text-red-600">$2,000</span> 清潔費。</p>
+                        <p>● <span class="font-bold text-teal-600">環保提醒：</span>2025年起不主動提供一次性盥洗用品，請自備牙刷牙膏。</p>
+                        <p>● <span class="font-bold">馬桶注意：</span>2F 部分房間馬桶自動開蓋損壞，請手動開啟。</p>
+                    </div>
+                </div>
+
+                <!-- Safety / General Rules -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-teal-700 text-sm border-l-4 border-teal-500 pl-2">🚫 禁忌與時間限制</h4>
+                    <div class="grid grid-cols-1 gap-2 text-xs text-gray-600">
+                        <div class="flex items-center space-x-2"><i class="fas fa-smoking-ban text-red-500"></i> <span>室內及二樓陽台嚴禁吸菸</span></div>
+                        <div class="flex items-center space-x-2"><i class="fas fa-volume-up text-amber-500"></i> <span>22:00 後請降低音量</span></div>
+                        <div class="flex items-center space-x-2"><i class="fas fa-moon text-indigo-500"></i> <span>21:40 戶外熄燈，請進入室內</span></div>
+                        <div class="flex items-center space-x-2"><i class="fas fa-bell text-red-400"></i> <span>二樓落地窗開啟10秒警報會響</span></div>
+                    </div>
+                </div>
+
+                <!-- Video Tutorials -->
+                <div class="space-y-2 pt-2">
+                    <h4 class="font-bold text-teal-700 text-sm border-l-4 border-teal-500 pl-2">📺 設備操作教學 (YouTube)</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="https://youtube.com/shorts/6DsQE3jbHcA" target="_blank" class="bg-gray-100 p-2 rounded-lg text-[10px] text-center hover:bg-teal-50 transition-colors">飲水機操作</a>
+                        <a href="https://youtube.com/shorts/9KqKWTzt9zg" target="_blank" class="bg-gray-100 p-2 rounded-lg text-[10px] text-center hover:bg-teal-50 transition-colors">數位花灑使用</a>
+                        <a href="https://youtube.com/shorts/0iXfzUnG-oQ" target="_blank" class="bg-gray-100 p-2 rounded-lg text-[10px] text-center hover:bg-teal-50 transition-colors">KTV 投影切換</a>
+                        <a href="https://youtube.com/channel/UCIMLnT_4W54bkrZbK75flVA" target="_blank" class="bg-teal-600 text-white p-2 rounded-lg text-[10px] text-center col-span-2">清曦私人會所 YT 頻道</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Modal: Gift Event Detail -->
     <div id="modal-event" class="modal fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none p-4">
@@ -261,11 +336,11 @@
             </div>
             <div class="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
                 <div class="border border-indigo-100 rounded-xl p-4 bg-indigo-50/30">
-                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm">第一台車</div>
+                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm text-gray-800">第一台車</div>
                     <p class="text-sm text-gray-600">蘇老爺、大阿阿、阿公、阿嬤</p>
                 </div>
                 <div class="border border-indigo-100 rounded-xl p-4 bg-indigo-50/30">
-                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm">第二台車</div>
+                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm text-gray-800">第二台車</div>
                     <p class="text-sm text-gray-600">羽、汝、咪咪</p>
                 </div>
             </div>
@@ -285,15 +360,15 @@
                     <i class="fas fa-info-circle mr-1"></i> 共 4 台車，其中 1 台直接前往民宿。
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
-                    <div class="font-bold text-gray-700 mb-2 border-b pb-1">第一台車</div>
+                    <div class="font-bold text-gray-700 mb-2 border-b pb-1 text-gray-800">第一台車</div>
                     <p>繆董、二阿阿</p>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
-                    <div class="font-bold text-gray-700 mb-2 border-b pb-1">第二台車</div>
+                    <div class="font-bold text-gray-700 mb-2 border-b pb-1 text-gray-800">第二台車</div>
                     <p>高、妙、1N</p>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
-                    <div class="font-bold text-gray-700 mb-2 border-b pb-1">第三台車</div>
+                    <div class="font-bold text-gray-700 mb-2 border-b pb-1 text-gray-800">第三台車</div>
                     <p>吳、仙、之之</p>
                 </div>
                 <div class="border border-amber-100 rounded-xl p-4 bg-amber-50/30">
