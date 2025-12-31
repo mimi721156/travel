@@ -48,14 +48,14 @@
             <p class="text-white/80">美好的時光，與最愛的家人一起分享</p>
         </div>
 
-        <!-- Essential Info (Grid Updated to 3 columns on desktop) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-indigo-50/50">
+        <!-- Essential Info -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-indigo-50/50 border-b border-indigo-100/50">
             <!-- Hsinchu Card -->
             <div onclick="openModal('modal-hsinchu')" class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm cursor-pointer hover:bg-indigo-50 transition-colors border border-transparent hover:border-indigo-200 group">
                 <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car text-xl"></i></div>
                 <div>
                     <p class="text-xs text-gray-500">新竹出發</p>
-                    <p class="font-bold">06:00 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="font-bold text-gray-800">06:00 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
                 </div>
             </div>
             <!-- Taipei Card -->
@@ -63,22 +63,22 @@
                 <div class="text-indigo-600 group-hover:scale-110 transition-transform"><i class="fas fa-car-side text-xl"></i></div>
                 <div>
                     <p class="text-xs text-gray-500">台北出發</p>
-                    <p class="font-bold">06:30 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="font-bold text-gray-800">06:30 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
                 </div>
             </div>
-            <!-- Gift Event Card (NEW) -->
+            <!-- Gift Event Card -->
             <div onclick="openModal('modal-event')" class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm cursor-pointer hover:bg-purple-50 transition-colors border border-transparent hover:border-purple-200 group">
                 <div class="text-purple-600 group-hover:scale-110 transition-transform"><i class="fas fa-gift text-xl"></i></div>
                 <div>
-                    <p class="text-xs text-gray-500 text-purple-600 font-bold">交換禮物</p>
-                    <p class="font-bold">活動說明 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
+                    <p class="text-xs text-purple-600 font-bold">交換禮物</p>
+                    <p class="font-bold text-gray-800">規則詳情 <i class="fas fa-info-circle text-[10px] ml-1 text-gray-300"></i></p>
                 </div>
             </div>
         </div>
 
         <!-- Tabs Navigation -->
         <div class="px-6 py-4 border-b border-gray-100 flex space-x-6 overflow-x-auto sticky top-0 bg-white z-10">
-            <a href="#day1" class="text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2 flex-shrink-0 transition-colors hover:text-indigo-800">
+            <a href="#day1" class="text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2 flex-shrink-0 transition-colors">
                 Day 1 行程
             </a>
             <a href="#day2" class="text-lg font-bold text-gray-400 pb-2 flex-shrink-0 transition-colors hover:text-indigo-500">
@@ -93,9 +93,9 @@
                 <h2 class="text-2xl font-bold text-gray-800">第一天｜1/3（六）</h2>
             </div>
             
-            <div class="relative border-l-2 border-indigo-100 ml-3 pl-8 pb-2">
+            <div class="relative border-l-2 border-indigo-100 ml-3 pl-8 pb-4">
                 <!-- Item 1: 傳藝 -->
-                <div class="relative mb-10">
+                <div class="relative mb-12">
                     <div class="timeline-dot"></div>
                     <div class="flex justify-between items-start mb-2">
                         <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded font-bold">09:00</span>
@@ -111,7 +111,7 @@
                 </div>
 
                 <!-- Item 2: 烤雞 -->
-                <div class="relative mb-10">
+                <div class="relative mb-12">
                     <div class="timeline-dot"></div>
                     <div class="flex justify-between items-start mb-2">
                         <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded font-bold">13:00</span>
@@ -123,8 +123,8 @@
                     <p class="text-sm text-amber-600 font-medium bg-amber-50 inline-block px-2 rounded mt-1">已訂位：14 大 1 小</p>
                 </div>
 
-                <!-- Item 3: 民宿 -->
-                <div class="relative mb-6">
+                <!-- Item 3: 民宿 & 重要提示 -->
+                <div class="relative mb-4">
                     <div class="timeline-dot"></div>
                     <div class="flex justify-between items-start mb-2">
                         <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded font-bold">15:00</span>
@@ -133,42 +133,45 @@
                         </a>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800">民宿：清曦私人會所</h3>
-                    <p class="text-sm text-gray-500 mt-1 italic">享受悠閒時光與私人空間</p>
+                    <p class="text-sm text-gray-500 mt-1 italic">享受家族包棟悠閒時光</p>
                 </div>
 
-                <!-- Activity Note (NEW) -->
-                <div class="relative mb-10 bg-purple-50 rounded-2xl p-4 border border-purple-100">
-                    <div class="flex items-center space-x-2 text-purple-600 mb-2">
-                        <i class="fas fa-gift"></i>
-                        <h4 class="font-bold text-sm">禮物抽獎活動準備</h4>
+                <!-- Integrated Info Group (Inside Timeline Container) -->
+                <div class="mt-6 space-y-4">
+                    <!-- Navigation Reminder -->
+                    <div class="bg-red-50 rounded-2xl p-4 border border-red-100 shadow-sm">
+                        <div class="flex items-center space-x-2 text-red-600 mb-3">
+                            <i class="fas fa-location-arrow"></i>
+                            <h4 class="font-bold text-sm">民宿導航重要提醒</h4>
+                        </div>
+                        <div class="text-xs text-gray-700 space-y-3">
+                            <p class="font-medium bg-white/60 p-2 rounded">導航定位點：<span class="text-red-600 font-bold underline">7-11 親河門市</span></p>
+                            <ul class="list-decimal list-inside space-y-1.5 pl-1 leading-relaxed">
+                                <li>過知名「來來牛排館」後</li>
+                                <li>右轉進入 <span class="font-bold">親河路二段 103 巷</span></li>
+                                <li>到 <span class="font-bold">東八路</span> 左轉</li>
+                                <li>民宿位於右側倒數第二間</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="text-xs text-gray-600 space-y-1">
-                        <p>● 繳交禮物：抵達民宿後請於主辦方挑選的地點繳交禮物</p>
-                        <p>● 禮物編號：由<span class="font-bold text-purple-600">主辦方</span>統一編號</p>
-                        <p>● 活動時間：晚餐後於大廳舉行</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Navigation Tips -->
-            <div class="bg-red-50 rounded-2xl p-5 border border-red-100">
-                <div class="flex items-center space-x-2 text-red-600 mb-3">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h4 class="font-bold">民宿導航重要提醒</h4>
-                </div>
-                <div class="text-sm text-gray-700 space-y-3">
-                    <p class="font-medium bg-white/50 p-2 rounded">建議導航點：<span class="text-red-600 font-bold">7-11 親河門市</span></p>
-                    <ul class="list-decimal list-inside space-y-1 pl-1">
-                        <li>過知名「來來牛排館」</li>
-                        <li>右轉進<span class="font-bold">親河路二段 103 巷</span></li>
-                        <li>到<span class="font-bold">東八路</span>左轉</li>
-                        <li>民宿在右邊倒數第二間</li>
-                    </ul>
+                    <!-- Gift Event Quick Look -->
+                    <div class="bg-purple-50 rounded-2xl p-4 border border-purple-100 shadow-sm">
+                        <div class="flex items-center space-x-2 text-purple-600 mb-3">
+                            <i class="fas fa-gift"></i>
+                            <h4 class="font-bold text-sm">🎁 禮物抽獎活動準備</h4>
+                        </div>
+                        <div class="text-xs text-gray-700 space-y-2">
+                            <p>● <span class="font-bold">繳交禮物：</span>抵達民宿後請交給 <span class="text-purple-600 font-bold">主辦方</span> 統一編號</p>
+                            <p>● <span class="font-bold">活動時間：</span>晚餐後於大廳舉行</p>
+                            <p>● <span class="font-bold">驚喜預告：</span>抽籤後將進行「最爛禮物」票選，請各位保重！</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Day 2 Section -->
+        <!-- Day 2 Content -->
         <div id="day2" class="bg-gray-50 p-6 space-y-6 anchor-offset">
             <div class="flex items-center space-x-2">
                 <div class="h-8 w-1 bg-indigo-500 rounded-full"></div>
@@ -209,7 +212,7 @@
 
     <!-- Modals Section -->
     
-    <!-- Modal: Gift Event (NEW) -->
+    <!-- Modal: Gift Event Detail -->
     <div id="modal-event" class="modal fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-event')"></div>
         <div class="bg-white rounded-3xl w-full max-w-md relative z-10 overflow-hidden shadow-2xl">
@@ -218,30 +221,30 @@
                 <button onclick="closeModal('modal-event')" class="text-white/80 hover:text-white"><i class="fas fa-times"></i></button>
             </div>
             <div class="p-6 space-y-4">
-                <div class="space-y-4">
+                <div class="space-y-4 font-medium">
                     <div class="flex items-start space-x-3">
                         <div class="bg-purple-100 text-purple-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</div>
                         <div>
-                            <p class="font-bold text-gray-800">禮物準備</p>
-                            <p class="text-sm text-gray-600">每人準備一份 <span class="text-purple-600 font-bold">$500 up</span> 的禮物，並請包裝完整保持神秘感。</p>
+                            <p class="text-gray-800">禮物準備</p>
+                            <p class="text-xs text-gray-500 mt-1">每人準備一份 <span class="text-purple-600 font-bold">$500 up</span> 的禮物，並包裝完整。</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-3">
                         <div class="bg-purple-100 text-purple-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</div>
                         <div>
-                            <p class="font-bold text-gray-800">抽籤 & 投票機制</p>
-                            <p class="text-sm text-gray-600">抽完籤並且公布所有禮物後，將進行匿名投票，選出「最爛」禮物。</p>
+                            <p class="text-gray-800">抽籤 & 投票</p>
+                            <p class="text-xs text-gray-500 mt-1">抽完籤公佈禮物後，全體匿名投票選出「年度最爛禮物」。</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-3">
                         <div class="bg-purple-100 text-purple-700 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</div>
                         <div>
-                            <p class="font-bold text-gray-800">額外懲罰</p>
-                            <p class="text-sm text-gray-600">得票最高前三位，可獲得請全家人喝飲料的殊榮！</p>
+                            <p class="text-gray-800">特別殊榮</p>
+                            <p class="text-xs text-gray-500 mt-1">最爛禮物前三名得主，將獲得請全家人喝飲料的殊榮！</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-800">
+                <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-[11px] text-amber-800">
                     <i class="fas fa-exclamation-circle mr-1"></i> 請勿準備：過期品、明顯是贈品的物品、或是家裡不要的舊物。
                 </div>
             </div>
@@ -258,11 +261,11 @@
             </div>
             <div class="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
                 <div class="border border-indigo-100 rounded-xl p-4 bg-indigo-50/30">
-                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1">第一台車</div>
+                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm">第一台車</div>
                     <p class="text-sm text-gray-600">蘇老爺、大阿阿、阿公、阿嬤</p>
                 </div>
                 <div class="border border-indigo-100 rounded-xl p-4 bg-indigo-50/30">
-                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1">第二台車</div>
+                    <div class="font-bold text-indigo-700 mb-2 border-b border-indigo-100 pb-1 text-sm">第二台車</div>
                     <p class="text-sm text-gray-600">羽、汝、咪咪</p>
                 </div>
             </div>
@@ -277,28 +280,28 @@
                 <h3 class="font-bold"><i class="fas fa-car-side mr-2"></i>台北出發車次名單</h3>
                 <button onclick="closeModal('modal-taipei')" class="text-white/80 hover:text-white"><i class="fas fa-times"></i></button>
             </div>
-            <div class="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
+            <div class="p-6 space-y-4 max-h-[70vh] overflow-y-auto text-sm text-gray-600">
                 <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-800 mb-2">
                     <i class="fas fa-info-circle mr-1"></i> 共 4 台車，其中 1 台直接前往民宿。
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
                     <div class="font-bold text-gray-700 mb-2 border-b pb-1">第一台車</div>
-                    <p class="text-sm text-gray-600">繆董、二阿阿</p>
+                    <p>繆董、二阿阿</p>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
                     <div class="font-bold text-gray-700 mb-2 border-b pb-1">第二台車</div>
-                    <p class="text-sm text-gray-600">高、妙、1N</p>
+                    <p>高、妙、1N</p>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-4">
                     <div class="font-bold text-gray-700 mb-2 border-b pb-1">第三台車</div>
-                    <p class="text-sm text-gray-600">吳、仙、之之</p>
+                    <p>吳、仙、之之</p>
                 </div>
                 <div class="border border-amber-100 rounded-xl p-4 bg-amber-50/30">
                     <div class="flex justify-between items-start mb-2 border-b border-amber-100 pb-1">
                         <div class="font-bold text-amber-700">第四台車</div>
-                        <span class="text-[10px] bg-amber-200 text-amber-800 px-1 rounded">直接前往民宿</span>
+                        <span class="text-[10px] bg-amber-200 text-amber-800 px-1 rounded font-bold">直接前往民宿</span>
                     </div>
-                    <p class="text-sm text-gray-600">coco、家</p>
+                    <p>coco、家</p>
                 </div>
             </div>
         </div>
@@ -321,4 +324,3 @@
     </script>
 </body>
 </html>
-
