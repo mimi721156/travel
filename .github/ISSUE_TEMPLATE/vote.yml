@@ -1,0 +1,22 @@
+name: 投票
+description: 參加者以代號投票（每人最多 3 票）
+title: "Vote: #<代號>"
+labels: ["vote"]
+body:
+  - type: input
+    id: participant_no
+    attributes:
+      label: 參加者代號
+      description: 請輸入 1 ~ N 的整數
+      placeholder: "7"
+    validations:
+      required: true
+
+  - type: textarea
+    id: gift_ids
+    attributes:
+      label: 投票禮物 ID（最多 3 個）
+      description: 用逗號分隔，例如 g1,g3,g8
+      placeholder: "g1,g2"
+    validations:
+      required: true
